@@ -105,7 +105,7 @@ export function CreateAdModal() {
                 type="text"
                 name="discord"
                 id="discord"
-                placeholder="Usuario#0808"
+                placeholder="Usuário#0808"
               />
             </div>
           </div>

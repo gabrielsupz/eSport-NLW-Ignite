@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import {
-  View,
   Modal,
   ModalProps,
   Text,
+  View,
   TouchableOpacity,
   Alert,
   ActivityIndicator
@@ -14,7 +15,6 @@ import * as Clipboard from 'expo-clipboard'
 import { styles } from './styles'
 import { THEME } from '../../theme'
 import { Heading } from '../Heading'
-import { useState } from 'react'
 
 interface Props extends ModalProps {
   discord: string
@@ -22,15 +22,19 @@ interface Props extends ModalProps {
 }
 
 export function DuoMatch({ discord, onClose, ...rest }: Props) {
-  const [isCopping, setIsCopping] = useState(false)
+  const [isCoping, setIsCoping] = useState(false)
 
-  async function handleCopyDiscordUserToClipboard() {
-    setIsCopping(true)
+  async function handleCopyDiscordToClipboard() {
+    setIsCoping(true)
     await Clipboard.setStringAsync(discord)
 
-    Alert.alert('Discord Copiado!', 'Agora só resta chamar seu duo!')
-    setIsCopping(false)
+    Alert.alert(
+      'Discord Copiado!',
+      'Usuário copiado para você colocar no Discord.'
+    )
+    setIsCoping(false)
   }
+
   return (
     <Modal animationType="fade" transparent statusBarTranslucent {...rest}>
       <View style={styles.container}>
@@ -42,6 +46,7 @@ export function DuoMatch({ discord, onClose, ...rest }: Props) {
               color={THEME.COLORS.CAPTION_500}
             />
           </TouchableOpacity>
+
           <CheckCircle size={64} color={THEME.COLORS.SUCCESS} weight="bold" />
 
           <Heading
@@ -49,19 +54,20 @@ export function DuoMatch({ discord, onClose, ...rest }: Props) {
             subtitle="Agora é só começar a jogar!"
             style={{ alignItems: 'center', marginTop: 24 }}
           />
+
           <Text style={styles.label}>Adicione no Discord</Text>
 
           <TouchableOpacity
             style={styles.discordButton}
-            onPress={handleCopyDiscordUserToClipboard}
-            disabled={isCopping}
+            onPress={handleCopyDiscordToClipboard}
+            disabled={isCoping}
           >
             <Text style={styles.discord}>
-              {isCopping ? (
+              {isCoping ? (
                 <ActivityIndicator color={THEME.COLORS.PRIMARY} />
               ) : (
                 discord
-              )}{' '}
+              )}
             </Text>
           </TouchableOpacity>
         </View>

@@ -1,46 +1,43 @@
-import {
-  SafeAreaView,
-  TouchableOpacity,
-  View,
-  Image,
-  FlatList,
-  Text
-} from 'react-native'
 import { useEffect, useState } from 'react'
+import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { useRoute, useNavigation } from '@react-navigation/native'
-import logoImg from '../../assets/logo-nlw-esports.png'
-import { Background } from '../../components/Background'
-import { DuoCard, DuoCardProps } from '../../components/DuoCard'
-import { DuoMatch } from '../../components/DuoMatch'
-import { Heading } from '../../components/Heading'
 import { Entypo } from '@expo/vector-icons'
-import { styles } from './styles'
+
+import logoImg from '../../assets/logo-nlw-esports.png'
+
 import { THEME } from '../../theme'
+import { styles } from './styles'
+
 import { GameParams } from '../../@types/navigation'
 
+import { Heading } from '../../components/Heading'
+import { Background } from '../../components/Background'
+import { DuoMatch } from '../../components/DuoMatch'
+import { DuoCard, DuoCardProps } from '../../components/DuoCard'
+
 export function Game() {
-  const route = useRoute()
-  const game = route.params as GameParams
+  const [duos, setDuos] = useState<DuoCardProps[]>([])
+  const [discordDuoSelected, setDiscordDuoSelected] = useState('')
+
   const navigation = useNavigation()
+  const router = useRoute()
+  const game = router.params as GameParams
 
   function handleGoBack() {
     navigation.goBack()
   }
 
-  const [duos, setDuos] = useState<DuoCardProps[]>([])
-  const [discordDuoSelected, setDiscordDuoSelected] = useState('')
   async function getDiscordUser(adsId: string) {
-    fetch(`http://192.168.1.107:3333/ads/${adsId}/discord`)
+    fetch(`http://192.168.1.101:3333/ads/${adsId}/discord`)
       .then(response => response.json())
       .then(data => setDiscordDuoSelected(data.discord))
   }
 
   useEffect(() => {
-    fetch(`http://192.168.1.107:3333/games/${game.id}/ads`)
+    fetch(`http://192.168.1.101:3333/games/${game.id}/ads`)
       .then(response => response.json())
-      .then(data => {
-        setDuos(data)
-      })
+      .then(data => setDuos(data))
   }, [])
 
   return (
@@ -51,7 +48,7 @@ export function Game() {
             <Entypo
               name="chevron-thin-left"
               color={THEME.COLORS.CAPTION_300}
-              size={20}
+              size={24}
             />
           </TouchableOpacity>
 
@@ -79,12 +76,12 @@ export function Game() {
           contentContainerStyle={[
             duos.length > 0 ? styles.contentList : styles.emptyListContent
           ]}
-          showsHorizontalScrollIndicator={false}
-          ListEmptyComponent={() => (
+          showsHorizontalScrollIndicator
+          ListEmptyComponent={
             <Text style={styles.emptyListText}>
-              Não há anúncios publicados ainda
+              Não há anúncios publicados ainda.
             </Text>
-          )}
+          }
         />
 
         <DuoMatch
