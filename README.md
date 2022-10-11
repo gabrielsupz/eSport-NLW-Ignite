@@ -38,6 +38,7 @@ $ npm run dev
 
 # Entre na pasta web e execute a parte web com:
 $ npm run dev
+#A aplicação web  poderá  ser acessada no link gerado.
 
 # A parte mobile requer utilização da expo, rode o código abaixo e insira o link gerado ou utilize o QRCode gerado:
 $ expo start
@@ -45,7 +46,6 @@ $ expo start
 # OBS: Baixe no seu telefone o aplicativo da Expo ou no seu emulador 😉
 
 ```
-A aplicação web  poderá  ser acessada então  em [`localhost:3333`](http://localhost:3333).
 
 
 ##  🎮 Objetivo do  Projeto
