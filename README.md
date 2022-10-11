@@ -2,7 +2,7 @@
 
 ## Descrição
 
-#### Projeto composto por 3 partes, uma para computadores feita em react onde é possivel criar anúncios, a para mobile one é possivel acessar os anúncios e pegar o discord do anúnciante e o back-end utilizado pelas duas partes.Curtiu 😋? Projeto feito na NLW eSports de 2022
+#### Projeto composto por 3 partes, uma para computadores feita em react onde é possivel criar anúncios, a para mobile onde é possivel acessar os anúncios e pegar o discord do anúnciante e o back-end utilizado pelas duas partes.Curtiu 😋? Projeto feito na NLW eSports de 2022
 
 <p align="center">
   <img alt="imgWeb" src="https://user-images.githubusercontent.com/102992996/195121260-5bc8bda5-d150-4273-b393-ad2899dcd25e.jpeg" width="45%" />
