@@ -1,8 +1,21 @@
-# NLW eSport por Gabriel Suptitz 🙃✌️
+# NLW eSport por Gabriel Suptitz ✌️
 
 ## Descrição
 
-#### Projeto composto por 3 partes,a para computadores feita em react onde é possivel criar anúncios, a para mobile one é possivel acessar os anúncios e pegar o discord do anúnciante e o back-end utilizado pelas duas partes,feita na nlw eSports.
+#### Projeto composto por 3 partes, uma para computadores feita em react onde é possivel criar anúncios, a para mobile one é possivel acessar os anúncios e pegar o discord do anúnciante e o back-end utilizado pelas duas partes.Curtiu 😋? Projeto feito na NLW eSports de 2022
+
+<p align="center">
+  <img alt="imgWeb" src="https://user-images.githubusercontent.com/102992996/195121260-5bc8bda5-d150-4273-b393-ad2899dcd25e.jpeg" width="45%" />
+ <img alt="imgWeb" src="https://user-images.githubusercontent.com/102992996/195122270-653a1b51-a82f-42d0-9a32-112b79afdcc0.jpeg" width="45%" />
+  
+</p>
+<p align="center">
+  <img alt="imgMobile" src="https://user-images.githubusercontent.com/102992996/195119845-3cd584ec-b37f-4045-a448-a8074f4a1cad.png" width="22%" />
+  <img alt="imgMobile2" src="https://user-images.githubusercontent.com/102992996/195120328-bfcca074-816f-41a9-8a6b-671bf2b83c6f.png" width="22%" />
+  <img alt="imgMobile3" src="https://user-images.githubusercontent.com/102992996/195120726-3ede1ed6-a27d-4fe2-8d70-6be86e77ff20.png" width="22%" />
+  <img alt="imgMobile4" src="https://user-images.githubusercontent.com/102992996/195120737-6044e2e1-c2cf-4afe-a5c0-08c56fcbb331.png" width="22%" />
+</p>
+
 
 ## 🛠️ Tecnologias
 
