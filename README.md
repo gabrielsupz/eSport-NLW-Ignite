@@ -38,7 +38,7 @@ $ npm run dev
 
 # Entre na pasta web e execute a parte web com:
 $ npm run dev
-#A aplicação web  poderá  ser acessada no link gerado.
+# A aplicação web  poderá  ser acessada no link gerado.
 
 # A parte mobile requer utilização da expo, rode o código abaixo e insira o link gerado ou utilize o QRCode gerado:
 $ expo start
