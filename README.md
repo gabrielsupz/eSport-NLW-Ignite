@@ -1,4 +1,4 @@
-# NLW eSport por Gabriel Suptitz ✌️
+# NLW eSports por Gabriel Suptitz ✌️
 
 ## Descrição
 
