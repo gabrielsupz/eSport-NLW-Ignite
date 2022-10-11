@@ -35,7 +35,7 @@ Clone o repositório ou baixe os arquivos
 
 ```bash
 # Para clonar:
-$ git clone https://github.com/gabrielsupz/eSport-NLW-Ignite
+$ git clone https://github.com/gabrielsupz/eSports-NLW-Ignite
 ```
 
 ###  Para iniciar o projeto:
